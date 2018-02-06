@@ -79,54 +79,31 @@ if [ ! -d "$DST_PATH" ];then
     mkdir -p "$DST_PATH"
 fi
 
-# Generate dirs
-if [ ! -d "$DST_PATH/mipmap-ldpi" ];then
-    mkdir -p "$DST_PATH/mipmap-ldpi"
-fi
-
-if [ ! -d "$DST_PATH/mipmap-mdpi" ];then
-    mkdir -p "$DST_PATH/mipmap-mdpi"
-fi
-
-if [ ! -d "$DST_PATH/mipmap-hdpi" ];then
-    mkdir -p "$DST_PATH/mipmap-hdpi"
-fi
-
-if [ ! -d "$DST_PATH/mipmap-xhdpi" ];then
-    mkdir -p "$DST_PATH/mipmap-xhdpi"
-fi
-
-if [ ! -d "$DST_PATH/mipmap-xxhdpi" ];then
-    mkdir -p "$DST_PATH/mipmap-xxhdpi"
-fi
-
-if [ ! -d "$DST_PATH/mipmap-xxxhdpi" ];then
-    mkdir -p "$DST_PATH/mipmap-xxxhdpi"
-fi
+info 'Generate splash-port-ldpi.png ...'
+convert "$SRC_FILE" -resize 320x320 -crop 200x320+60+0 "$DST_PATH/splash-port-ldpi.png"
+info 'Generate splash-port-mdpi.png ...'
+convert "$SRC_FILE" -resize 480x480 -crop 320x480+80+0 "$DST_PATH/splash-port-mdpi.png"
+info 'Generate splash-port-hdpi.png ...'
+convert "$SRC_FILE" -resize 800x800 -crop 480x800+160+0 "$DST_PATH/splash-port-hdpi.png"
+info 'Generate splash-port-xhdpi.png ...'
+convert "$SRC_FILE" -resize 1280x1280 -crop 720x1280+280+0 "$DST_PATH/splash-port-xhdpi.png"
+info 'Generate splash-port-xxhdpi.png ...'
+convert "$SRC_FILE" -resize 1600x1600 -crop 960x1600+320+0 "$DST_PATH/splash-port-xxhdpi.png"
+info 'Generate splash-port-xxxhdpi.png ...'
+convert "$SRC_FILE" -resize 1920x1920 -crop 1280x1920+320+0 "$DST_PATH/splash-port-xxxhdpi.png"
 
 
-info 'Generate mipmap-ldpi/ic_launcher.png ...'
-convert "$SRC_FILE" -resize 36x36 "$DST_PATH/mipmap-ldpi/ic_launcher.png"
-
-info 'Generate mipmap-mdpi/ic_launcher.png ...'
-convert "$SRC_FILE" -resize 48x48 "$DST_PATH/mipmap-mdpi/ic_launcher.png"
-
-info 'Generate mipmap-hdpi/ic_launcher.png ...'
-convert "$SRC_FILE" -resize 72x72 "$DST_PATH/mipmap-hdpi/ic_launcher.png"
-
-
-info 'Generate mipmap-xhdpi/ic_launcher.png ...'
-convert "$SRC_FILE" -resize 96x96 "$DST_PATH/mipmap-xhdpi/ic_launcher.png"
-
-
-info 'Generate mipmap-xxhdpi/ic_launcher.png ...'
-convert "$SRC_FILE" -resize 144x144 "$DST_PATH/mipmap-xxhdpi/ic_launcher.png"
-
-
-info 'Generate mipmap-xxxhdpi/ic_launcher.png ...'
-convert "$SRC_FILE" -resize 192x192 "$DST_PATH/mipmap-xxxhdpi/ic_launcher.png"
-
-info 'Generate playstore-icon.png ...'
-convert "$SRC_FILE" -resize 1024x1024 "$DST_PATH/playstore-icon.png"
+info 'Generate splash-land-ldpi.png ...'
+convert "$SRC_FILE" -resize 320x320 -crop 320x200+0+60 "$DST_PATH/splash-land-ldpi.png"
+info 'Generate splash-land-mdpi.png ...'
+convert "$SRC_FILE" -resize 480x480 -crop 480x320+0+80 "$DST_PATH/splash-land-mdpi.png"
+info 'Generate splash-land-hdpi.png ...'
+convert "$SRC_FILE" -resize 800x800 -crop 800x480+0+160 "$DST_PATH/splash-land-hdpi.png"
+info 'Generate splash-land-xhdpi.png ...'
+convert "$SRC_FILE" -resize 1280x1280 -crop 1280x720+0+280 "$DST_PATH/splash-land-xhdpi.png"
+info 'Generate splash-land-xxhdpi.png ...'
+convert "$SRC_FILE" -resize 1600x1600 -crop 1600x960+0+320 "$DST_PATH/splash-land-xxhdpi.png"
+info 'Generate splash-land-xxxhdpi.png ...'
+convert "$SRC_FILE" -resize 1920x1920 -crop 1920x1280+0+320 "$DST_PATH/splash-land-xxxhdpi.png"
 
 info 'Generate Done.'
