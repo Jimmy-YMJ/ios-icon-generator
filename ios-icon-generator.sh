@@ -93,6 +93,16 @@ convert "$SRC_FILE" -resize 40x40 "$DST_PATH/Icon-20@2x.png"
 info 'Generate Icon-40@2x.png ...'
 convert "$SRC_FILE" -resize 60x60 "$DST_PATH/Icon-20@3x.png"
 
+info 'Generate Icon-24.png ...'
+convert "$SRC_FILE" -resize 24x24 "$DST_PATH/Icon-24.png"
+info 'Generate Icon-24@2x.png ...'
+convert "$SRC_FILE" -resize 48x48 "$DST_PATH/Icon-24@2x.png"
+
+info 'Generate Icon-27.5.png ...'
+convert "$SRC_FILE" -resize 27.5x27.5 "$DST_PATH/Icon-27.5.png"
+info 'Generate Icon-27.5@2x.png ...'
+convert "$SRC_FILE" -resize 55x55 "$DST_PATH/Icon-27.5@2x.png"
+
 info 'Generate Icon-29.png ...'
 convert "$SRC_FILE" -resize 29x29 "$DST_PATH/Icon-29.png"
 info 'Generate Icon-29@2x.png ...'
@@ -106,6 +116,9 @@ info 'Generate Icon-40@2x.png ...'
 convert "$SRC_FILE" -resize 80x80 "$DST_PATH/Icon-40@2x.png"
 info 'Generate Icon-40@3x.png ...'
 convert "$SRC_FILE" -resize 120x120 "$DST_PATH/Icon-40@3x.png"
+
+info 'Generate Icon-44@2x.png ...'
+convert "$SRC_FILE" -resize 88x88 "$DST_PATH/Icon-44@2x.png"
 
 info 'Generate Icon-60.png ...'
 convert "$SRC_FILE" -resize 60x60 "$DST_PATH/Icon-60.png"
@@ -131,6 +144,12 @@ info 'Generate Icon-72.png ...'
 convert "$SRC_FILE" -resize 72x72 "$DST_PATH/Icon-72.png"
 info 'Generate Icon-72@2x.png ...'
 convert "$SRC_FILE" -resize 144x144 "$DST_PATH/Icon-72@2x.png"
+
+info 'Generate Icon-86@2x.png ...'
+convert "$SRC_FILE" -resize 172x172 "$DST_PATH/Icon-86@2x.png"
+
+info 'Generate Icon-98@2x.png ...'
+convert "$SRC_FILE" -resize 196x196 "$DST_PATH/Icon-98@2x.png"
 
 info 'Generate Icon-50.png ...'
 convert "$SRC_FILE" -resize 50x50 "$DST_PATH/Icon-50.png"
